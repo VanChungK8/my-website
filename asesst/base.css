@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'GrindDemolished';
+  src: url('/asesst/font/Grind_Demolished/Grind_Demolished.ttf') format('truetype'); /* sửa đường dẫn nếu khác */
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+    --primary-color: #005c9b;
+    --text-color: #014e69;
+    --hover-footer-color: #00506c;
+    --accent-text-color: #ff9f24;
+    --highlight-bg-color: #f4f2e3;
+    --black-color: #000;
+    /* --text-color: #333; */
+    --white-color: #fff;
+    --border-color: #ccc;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.grid__column-2 {
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    width: 16.6667%;
+}
+
+/* layout 5 cột */
+.grid__column-2-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25%;
+}
+
+.grid__column-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 32%;
+}
+
+.grid__column-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+  scroll-behavior: smooth; /* cuộn mượt */
+}
+
+.section-tour-highlight, .form-section {
+  padding: 100px 20px;
+ 
+  border-bottom: 1px solid #ccc;
+}
+
+.section-tour-highlight:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.section-tour-highlight:nth-child(even),
+.form-section {
+  background-color: #e0f7fa;
+}
+
+
+/* Phóng to thu nhỏ nút */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
