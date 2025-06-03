@@ -1,7 +1,7 @@
 /* Header chính */
 header {
-    background-color: var(--primary-color);
-    height: 70px;
+    background-color: var(--white-color);
+    height: 90px;
     color: var(--white-color);
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     box-sizing: border-box;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--primary-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -19,7 +19,7 @@ header {
 
 /* Định dạng logo */
 .header__logo img {
-    height: 100px;
+    max-height: 100px;
     object-fit: contain;
     padding-left: 80px;
 }
@@ -39,7 +39,7 @@ header {
 }
 
 .header__menu-item a {
-    color: var(--white-color);
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
     font-size: 1.6rem;
@@ -48,14 +48,14 @@ header {
 
 .header__menu-item a:hover {
     color: var(--accent-text-color);
-    transform: scale(1.08); /* Sửa lỗi từ 1.98 thành 1.08 để hiệu ứng mượt hơn */
+    transform: scale(1.08);
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
 /* Phone button */
 .header__phone {
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 8px 18px;
     border-radius: 999px;
     font-weight: bold;
@@ -67,7 +67,7 @@ header {
 }
 
 .header__phone:hover {
-    background-color: var(--highlight-bg-color);
+    background-color: var(--accent-text-color);
 }
 
 /* Hiệu ứng động */
@@ -316,7 +316,7 @@ header {
 }
 
 .section-tour-highlight .tour-title {
-    color: #004466;
+    color:var(--text-color);
     font-size: 3.4rem;
     font-weight: 550;
     margin-bottom: 10px;
@@ -329,7 +329,7 @@ header {
 }
 
 .section-tour-highlight .tour-desc {
-    color: #003344;
+    color: var(--text-color);
     font-size: 1.6rem;
     max-width: 700px;
     margin: 0 auto 30px;
@@ -472,7 +472,7 @@ header {
 
 /* Highlight Tour Section */
 .highlight-tour-section {
-  background-image: url(/asesst/image/bbbg_2-20230802094532-umyq5.jpg);
+    background-image: url(/asesst/image/bbbg_2-20230802094532-umyq5.jpg);
     padding-top: 360px;
     position: relative;
     width: 100%;
@@ -570,7 +570,7 @@ header {
     opacity: 0.5;
     z-index: -1;
     height: 200px;
-    width: 1000px;
+    max-width: 1000px;
 }
 
 .highlight-description-bg p {
@@ -928,12 +928,12 @@ button[type="submit"]:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--hover-footer-color);
-    color: #fff;
+    border-top: 2px solid var(--primary-color);
     font-family: Arial, sans-serif;
 }
 
 .footer-container {
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     max-width: 1000px;
@@ -959,7 +959,7 @@ button[type="submit"]:hover {
 }
 
 .footer-logo {
-    max-width: 200px;
+    max-width: 140px;
 }
 
 .footer-right {
@@ -973,7 +973,8 @@ button[type="submit"]:hover {
 .footer-bottom {
     text-align: center;
     font-size: 1.2rem;
-    background-color: #016985;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     height: 40px;
     display: flex;
@@ -990,7 +991,7 @@ button[type="submit"]:hover {
         padding: 0 20px;
     }
     .header__logo img {
-        height: 80px;
+        max-height: 80px;
         padding-left: 40px;
     }
     .header__menu {
@@ -1067,7 +1068,10 @@ button[type="submit"]:hover {
     }
     .highlight-description-bg {
         max-width: 700px;
+    }
+    .highlight-description-bg::before {
         left: 0;
+        width: 100%;
     }
 
     /* Footer */
@@ -1080,12 +1084,13 @@ button[type="submit"]:hover {
 @media (max-width: 768px) {
     /* Header */
     header {
+        position: static; /* Tắt position: sticky trên điện thoại */
         flex-direction: column;
         height: auto;
         padding: 10px 20px;
     }
     .header__logo img {
-        height: 60px;
+        max-height: 60px;
         padding-left: 0;
     }
     .header__menu {
@@ -1288,10 +1293,11 @@ button[type="submit"]:hover {
 @media (max-width: 480px) {
     /* Header */
     header {
+        position: static;
         padding: 10px 15px;
     }
     .header__logo img {
-        height: 50px;
+        max-height: 50px;
     }
     .header__menu-item a {
         font-size: 1.4rem;
@@ -1433,6 +1439,8 @@ button[type="submit"]:hover {
         font-size: 2rem;
         line-height: 2.5rem;
     }
+    .bank-container
+    
     .bank-content p {
         font-size: 12px;
     }
@@ -1447,6 +1455,6 @@ button[type="submit"]:hover {
         font-size: 12px;
     }
     .footer-logo {
-        max-width: 150px;
+        max-width: 120px;
     }
 }
